@@ -1,0 +1,65 @@
+---
+sidebar_position: 3
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Search a Face
+
+### Search with multiple Result
+
+Return multiple search result with limit based on user's package.
+
+<Tabs groupId="code-sample">
+  <TabItem value="js" label="JS/TS">
+    ```javascript
+    const mugshot = new MugshotClient("API_KEY");
+
+    mugshot.searchFace(Blob)
+    ```
+  </TabItem>
+  <TabItem value="go" label="Go">
+    ```go
+    var mug = mugshot.Default("API_KEY")
+
+    mug.SearchFace([]byte)
+    ```
+  </TabItem>
+  <TabItem value="python" label="Python">
+    ```python
+    mug = mugshot.Default("API_KEY")
+
+    mug.search_face(image)
+    ```
+  </TabItem>
+</Tabs>
+
+### Search only for first result
+
+Returns only one item with the most highest score
+
+<Tabs groupId="code-sample">
+  <TabItem value="js" label="JS/TS">
+    ```javascript
+    const mugshot = new MugshotClient("API_KEY");
+
+    mugshot.searchFaceFirst(Blob)
+    ```
+  </TabItem>
+  <TabItem value="go" label="Go">
+    ```go
+    var mug = mugshot.Default("API_KEY")
+
+    mug.SearchFaceFirst([]byte)
+    ```
+  </TabItem>
+  <TabItem value="python" label="Python">
+    ```python
+    mug = mugshot.Default("API_KEY")
+
+    mug.search_face_first(image)
+    ```
+  </TabItem>
+</Tabs>
+

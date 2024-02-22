@@ -1,0 +1,45 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Adding a Face
+
+Add a face using Mugshot Library:
+
+<Tabs>
+  <TabItem value="js" label="JS/TS">
+    ```javascript
+    const mugshot = new MugshotClient("API_KEY");
+
+    const metadata = {
+        "name": "James",
+        "person_id": 1
+    }
+    mugshot.addFace(Blob, metadata)
+    ```
+  </TabItem>
+  <TabItem value="go" label="Go">
+    ```go
+    var mug = mugshot.Default("API_KEY")
+
+    mug.AddFace([]byte, map[string]any{
+        "name": "James",
+        "person_id": 1
+    })
+    ```
+  </TabItem>
+  <TabItem value="python" label="Python">
+    ```python
+    mug = mugshot.Default("API_KEY")
+
+    mug.add_face(image, {
+        "name": "James",
+        "person_id": 1
+    })
+    ```
+  </TabItem>
+</Tabs>
+
